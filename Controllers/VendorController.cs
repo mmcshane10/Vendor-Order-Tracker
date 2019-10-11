@@ -1,16 +1,31 @@
-// using Microsoft.AspNetCore.Mvc;
-// using OrderTracker.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using OrderTracker.Models;
 
-// namespace OrderTracker.Controllers
-// {
-//     public class ItemsController : Controller
-//     {
+namespace OrderTracker.Controllers
+{
+    public class VendorController : Controller
+    {
 
-//         [HttpGet("/")]
-//         public ActionResult Index()
-//         {
-//             return View();
-//         }
+        [HttpGet("/vendor")]
+        public ActionResult Index()
+        {
+            List<Vendor> allVendors = Vendor.GetAll();
+            return View(allVendors);
+        }
 
-//     }
-// }
+        [HttpGet("/vendor/new")]
+        public ActionResult New()
+        {
+            return View();
+        }
+
+        [HttpPost("/vendor")]
+        public ActionResult Create(string name, string description)
+        {
+            Vendor newVendor = new Vendor(name, description);
+            return RedirectToAction("Index");
+        }
+
+    }
+}
