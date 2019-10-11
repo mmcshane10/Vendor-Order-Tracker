@@ -10,12 +10,20 @@
         <link rel="stylesheet" type="text/css" media="screen" href="~/css/styles.css">
     </head>
     <body>
+        <div class="container">
         <h1>Order Details: </h1>
 
         <h2>@Model["order"].Name</h2>
         <h3>Vendor: @Model["vendor"].Name</h3>
+        <h4>Delivery Date: @Model["order"].DeliveryDate</h4>
+        <h4># of Breads: @Model["order"].BreadCount</h4>
+        <h4># of Pastries: @Model["order"].PastryCount</h4>
+        <h3>Order Cost: $@Model["order"].OrderCost</h3>
 
-        <a href='/vendor/@Model["vendor"].Id/order/new'>Add Another Order</a>
-        <a href='/vendor'>Back To Vendor Page</a>
+        <a href='/vendor/@Model["vendor"].Id/order/new'><button class="btn btn-primary" type="click" name="button">Add Another Order</button></a>
+        
+        <a href='/vendor'><button class="btn btn-primary" type="click" name="button">Back</button></a>
+
+        </div>
     </body>
 </html>
