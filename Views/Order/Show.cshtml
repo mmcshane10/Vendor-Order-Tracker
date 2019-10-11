@@ -14,11 +14,11 @@
         <h1>Order Details: </h1>
 
         <h2>@Model["order"].Name</h2>
-        <h3>Vendor: @Model["vendor"].Name</h3>
-        <h4>Delivery Date: @Model["order"].DeliveryDate</h4>
-        <h4># of Breads: @Model["order"].BreadCount</h4>
-        <h4># of Pastries: @Model["order"].PastryCount</h4>
-        <h3>Order Cost: $@Model["order"].OrderCost</h3>
+        <h3><span class="labels">Vendor:</span> @Model["vendor"].Name</h3>
+        <h4><span class="labels">Delivery Date:</span> @Model["order"].DeliveryDate</h4>
+        <h4><span class="labels">Total Breads:</span> @Model["order"].BreadCount</h4>
+        <h4><span class="labels">Total Pastries:</span> @Model["order"].PastryCount</h4>
+        <h3><span class="labels">Order Cost:</span> $@Model["order"].OrderCost</h3>
 
         <a href='/vendor/@Model["vendor"].Id/order/new'><button class="btn btn-primary" type="click" name="button">Add Another Order</button></a>
         
