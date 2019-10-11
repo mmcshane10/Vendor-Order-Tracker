@@ -51,11 +51,15 @@ namespace OrderTracker.Controllers
         [HttpPost("/vendor/{vendorId}/order")]
         public ActionResult Create(int vendorId, string orderName, string deliveryDate, string breadCount, string pastryCount)
         {
+
             int breadInt = int.Parse(breadCount);
             int pastryInt = int.Parse(pastryCount);
             Dictionary<string, object> model = new Dictionary<string, object>();
             Vendor foundVendor = Vendor.Find(vendorId);
             Order newOrder = new Order(orderName, deliveryDate, breadInt, pastryInt);
+            newOrder.OrderCost = 0;
+            newOrder.BreadSubtotal(newOrder);
+            newOrder.PastrySubtotal(newOrder);
             foundVendor.AddOrder(newOrder);
             List<Order> vendorOrders = foundVendor.Orders;
             model.Add("order", vendorOrders);

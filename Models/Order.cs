@@ -29,5 +29,37 @@ namespace OrderTracker.Models
             return _instances[searchId - 1];
         }
 
+        public int BreadSubtotal(Order newOrder)
+        {
+            for (int i = 1; i <= newOrder.BreadCount; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    newOrder.OrderCost += 0;
+                }
+                else
+                {
+                    newOrder.OrderCost += 5;
+                }
+            }
+
+            return newOrder.OrderCost;
+        }
+
+        public int PastrySubtotal(Order newOrder)
+        {
+            for (int i = 1; i <= newOrder.PastryCount; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    newOrder.OrderCost += 1;
+                }
+                else
+                {
+                    newOrder.OrderCost += 2;
+                }
+            }
+            return newOrder.OrderCost;
+        }
     }
 }
