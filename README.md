@@ -15,7 +15,7 @@ _A MVC application that allows Pierre, the owned of EpiDOUGHdus, to enter and ke
 | It lets Pierre add a new vendor. | Mike's Market | Mike's Market |
 | It lets Pierre view details for each vendor | Mike's Market | "Mike's Market orders two dozen loaves of bread each week." |
 | It lets Pierre add an order to a specific vendor | PO12345 | Mike's Market Orders: PO 12345 |
-| It lets Pierre view details for each order |PO 12345 | # of Bread loaves: 24 |
+| It lets Pierre view details for each order |PO12345 | # of Bread loaves: 24 |
 
 ## Setup/Installation Requirements_
 
