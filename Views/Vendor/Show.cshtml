@@ -7,10 +7,14 @@
         <title>Vendor Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+        <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" media="screen" href="~/css/styles.css">
     </head>
     <body>
         <div class="container">
+            <div class="header">
+                <h1>EpiDOUGHdus <h1>
+            </div>
             <h1>Vendor Details</h1>
 
             <h2>@Model["vendor"].Name</h2>
@@ -24,8 +28,8 @@
                 }
             </ol>
     
-            <a href='/vendor/@Model["vendor"].Id/order/new'><button class="btn btn-primary" type="click" name="button">Create New Order</button></a>
-            <a href="/vendor"><button class="btn btn-primary" type="click" name="button">Back</button></a>  
+            <a href='/vendor/@Model["vendor"].Id/order/new'><button class="btn" type="click" name="button">Create New Order</button></a>
+            <a href="/vendor"><button class="btn" type="click" name="button">Back</button></a>  
         </div> 
     </body>
 </html>
