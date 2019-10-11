@@ -6,7 +6,7 @@
 
 ## Description
 
-_A MVC application that allows Pierre, the owned of EpiDOUGHdus, to enter and keep track of orders by all his vendors._
+_A MVC application that allows Pierre, the owner of EpiDOUGHdus, to enter and keep track of orders by all his vendors._
 
 ## Specifications
 
