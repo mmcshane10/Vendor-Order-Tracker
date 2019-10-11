@@ -11,17 +11,13 @@
     </head>
     <body>
         <div class="container">
-            <h1>Vendor List</h1>
+            <h1>Vendor Details</h1>
 
-        <ul>
-            @foreach (Vendor vendor in Model)
-            {
-                <li><a href='/vendor/@vendor.Id'>@vendor.Name</a></li>
-            }
-        </ul>
-            
-            
-            <a href="/order/new"><button class="btn btn-primary" type="click" name="button">Add Another Vendor</button></a>
+            <h2>@Model.Name</h2>
+            <p>@Model.Description</p>
+    
+            <a href="/order/new"><button class="btn btn-primary" type="click" name="button">Create New Order</button></a>
+            <a href="/vendor"><button class="btn btn-primary" type="click" name="button">Back To Vendor List</button></a>  
         </div> 
     </body>
 </html>

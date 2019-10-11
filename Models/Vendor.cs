@@ -29,5 +29,10 @@ namespace OrderTracker.Models
         {
             return _vendors;
         }
+
+        public static Vendor Find(int searchId)
+        {
+            return _vendors[searchId - 1];
+        }
     }
 }
