@@ -11,7 +11,7 @@ namespace OrderTracker.Models
         public int PastryCount { get; set; }
         public int OrderCost { get; set; }
         
-        public Vendor(string name, string deliveryDate, int breadCount, int pastryCount)
+        public Order(string name, string deliveryDate, int breadCount, int pastryCount)
         {
             Name = name;
             DeliveryDate = deliveryDate;

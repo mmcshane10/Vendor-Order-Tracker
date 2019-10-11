@@ -7,7 +7,8 @@ namespace OrderTracker.Models
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public static List<Order> _orders = new List<Order> { };
+        public static List<Vendor> _vendors = new List<Vendor> { };
+        public static List<Order> Orders { get; set; }
         public int Id { get; }
         private static int _idCounter = 0;
 
@@ -15,10 +16,14 @@ namespace OrderTracker.Models
         {
             Name = name;
             Description = description;
-            _orders.Add(this);
+            _vendors.Add(this);
+            Orders = new List<Order> { };
             _idCounter++;
-            
-            
+        }
+
+        public void AddOrder(Order order)
+        {
+            Orders.Add(order);
         }
     }
 }
