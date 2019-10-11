@@ -13,8 +13,14 @@
         <div class="container">
             <h1>Vendor Details</h1>
 
-            <h2>@Model.Name</h2>
-            <p>@Model.Description</p>
+            
+            <h3>Open Orders:</h3>
+            <ol>
+                @foreach (Order order in @Model["orders"])
+                {
+                <li><a href='/vendor/@Model["vendor"].Id/itemsorder/@order.Id'>@order.Name</a></li>
+                }
+            </ol>
     
             <a href="/order/new"><button class="btn btn-primary" type="click" name="button">Create New Order</button></a>
             <a href="/vendor"><button class="btn btn-primary" type="click" name="button">Back To Vendor List</button></a>  

@@ -9,17 +9,27 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome New Vendors!</h1>
-        <p>Please enter a little bit about yourself below:</p>
-        <form action="/vendor" method="post">
+        <h1>New Order Entry</h1>
+        <p>Please enter the below information for this new order:</p>
+        <form action="/order" method="post">
             <div class="form-group">
-                <label for="name">Enter your name:</label>
+                <label for="name">Enter Order Name or Number:</label>
                 <input id="name" name="name" type="text">
             </div>
 
             <div class="form-group">
-                <label for="description">Tell us about yourself:</label>
-                <input id="description" name="description" type="text">
+                <label for="deliveryDate">Enter a Delivery Date:</label>
+                <input id="deliveryDate" name="deliveryDate" type="date">
+            </div>
+
+            <div class="form-group">
+                <label for="breadCount">Number of Breads:</label>
+                <input id="breadCount" name="breadCount" type="text">
+            </div>
+
+            <div class="form-group">
+                <label for="pastryCount">Number of Pastries:</label>
+                <input id="pastryCount" name="pastryCount" type="text">
             </div>
 
             <button class="btn btn-primary" type="submit">Submit</button>

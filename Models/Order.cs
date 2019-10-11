@@ -10,6 +10,8 @@ namespace OrderTracker.Models
         public int BreadCount { get; set; }
         public int PastryCount { get; set; }
         public int OrderCost { get; set; }
+        private static List<Order> _instances = new List<Order> { };
+        public int Id { get; }
         
         public Order(string name, string deliveryDate, int breadCount, int pastryCount)
         {
@@ -18,6 +20,14 @@ namespace OrderTracker.Models
             BreadCount = breadCount;
             PastryCount = pastryCount;
             OrderCost = 0;
+            _instances.Add(this);
+            Id = _instances.Count;
         }
+
+        public static Order Find(int searchId)
+        {
+            return _instances[searchId - 1];
+        }
+
     }
 }
