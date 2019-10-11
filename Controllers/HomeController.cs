@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using Parcel.Models;
+using OrderTracker.Models;
 
-namespace Parcel.Controllers
+namespace OrderTracker.Controllers
 {
     public class HomeController : Controller
     {

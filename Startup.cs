@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Parcel
+namespace OrderTracker
 {
     public class Startup
     {
@@ -33,6 +33,8 @@ namespace Parcel
             name: "default",
             template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            app.UseStaticFiles();
 
             app.Run(async (context) =>
             {

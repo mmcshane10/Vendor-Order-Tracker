@@ -1,7 +1,7 @@
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
-namespace Parcel
+namespace OrderTracker
 {
     public class Program
     {
