@@ -10,6 +10,12 @@
         <link rel="stylesheet" type="text/css" media="screen" href="~/css/styles.css">
     </head>
     <body>
-        
+        <h1>Order Details: </h1>
+
+        <h2>@Model["order"].Name</h2>
+        <h3>Vendor: @Model["vendor"].Name</h3>
+
+        <a href='/vendor/@Model["vendor"].Id/order/new'>Add Another Order</a>
+        <a href='/vendor'>Back To Vendor Page</a>
     </body>
 </html>

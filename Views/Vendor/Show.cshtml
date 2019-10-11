@@ -13,12 +13,14 @@
         <div class="container">
             <h1>Vendor Details</h1>
 
+            <h2>@Model["vendor"].Name</h2>
+            <p>@Model["vendor"].Description</p>
             
             <h3>Open Orders:</h3>
             <ol>
-                @foreach (Order order in @Model["orders"])
+                @foreach (var order in @Model["order"])
                 {
-                <li><a href='/vendor/@Model["vendor"].Id/itemsorder/@order.Id'>@order.Name</a></li>
+                <li><a href='/vendor/@Model["vendor"].Id/order/@order.Id'>@order.Name</a></li>
                 }
             </ol>
     
